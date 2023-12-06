@@ -4,12 +4,14 @@ import Home from './pages/Home/home';
 import Services from './pages/Services/service';
 import './index.css';
 
+
 function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
+       
       </Routes>
     </Router>
   );
