@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../../assets/logo.png"
 
 const Navbar = () => {
   return (
@@ -10,9 +11,8 @@ const Navbar = () => {
           class="flex items-center space-x-4 rtl:space-x-reverse"
         >
           <img
-            src="https://flowbite.com/docs/images/logo.svg"
-            class="h-8 ml-2"
-            alt="Flowbite Logo"
+            src={logo}
+            className="w-full"
           />
           <span class="self-center text-2xl font-semibold whitespace-nowrap ">
             WorldAir
