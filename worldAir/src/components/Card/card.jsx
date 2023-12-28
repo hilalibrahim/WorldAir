@@ -1,21 +1,49 @@
-import React from "react";
+import React from 'react';
+import { Carousel, Card, Container, Row, Col } from 'react-bootstrap';
+import './card.css'
+import n2 from '../../assets/n2.jpg'
+import N1 from '../../assets/N1.jpg'
+const ExclusiveStays = () => {
+  return (
+    <Container className="exclusive-stays">
+      <h2 className="text-center1"> Our Exclusive Stays and Exciting Offers</h2>
+      <Row className="justify-content-center">
+        <Col md={8}>
+          <Carousel interval={3000} pause={false}>
+            <Carousel.Item>
+              <Card>
+                <Card.Img
+                  variant="top"
+                  src={N1} // Replace with your image URL
+                  alt="Offer 1"
+                />
+               
+                <Card.Body>
+                  <Card.Title> <p className="card-title">Nidhi Residency</p> </Card.Title>
+                  <Card.Text>Enjoy your stay at heart of Guruvayoor as you visit the Temple.</Card.Text>
+                </Card.Body>
+              </Card>
+            </Carousel.Item>
+            <Carousel.Item>
+              <Card>
+                <Card.Img
+                  variant="top"
+                  src={n2} // Replace with your image URL
+                  alt="Offer 2"
+                />
+                
+                <Card.Body className='card-body'>
+                  <Card.Title ><p className='card-title'>Nidhi Cottage</p></Card.Title>
+                  <Card.Text>A refreshing and beautiful stay near Chettuva Backwaters</Card.Text>
+                </Card.Body>
+              </Card>
+            </Carousel.Item>
+            {/* Add more Carousel.Item for additional exclusive stays and offers */}
+          </Carousel>
+        </Col>
+      </Row>
+    </Container>
+  );
+};
 
- function card({ name, img, para }) {
-    return (
-      <div>
-        <div className="flex flex-col justify-center items-center  rounded-3xl bg-transparent bg-white w-full h-60 bg-opacity-[20%] ">
-  
-          <Image src={img} className="w-[233px] h-[211px] absolute  mt-[3px]  lg:mr-[27rem] sm:mr-[22rem] rounded-3xl  " alt={name} />
-          <div className="flex flex-col ml-3 mt-5 lg:gap-0 ">
-            <p className="font-montserrat text-[24px] font-semibold leading-29 tracking-wider ml-[18rem]  text-white  mb-[1rem]">{name}</p>
-            <p className="font-sans text-base font-semibold leading-tight tracking-tight ml-[18rem] text-[#94a3b8] ">{para}</p>
-            <button className=" text-[20px] sm:text-2xl  sm:tracking-[10px] ml-[290px]  w-[200px] bg-gray-300 py-6 md:py-3  text-dark  font-bold rounded-lg my-10 md:my-7  ">REGISTER
-            </button>
-          </div>
-        </div>
-      </div>
-    );
-  }
-  
-  export default card;
-  
+export default ExclusiveStays;
