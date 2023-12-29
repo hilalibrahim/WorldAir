@@ -60,7 +60,7 @@
 // //   };
 
 // //   return (
-//     <LoadScript googleMapsApiKey="AIzaSyBr3fmCOTHqTplMFfNAW7IbB7kuErkYJPs">
+//     <LoadScript googleMapsApiKey="">
 //       <GoogleMap
 //         mapContainerStyle={mapStyles}
 //         zoom={12}
